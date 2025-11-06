@@ -1,0 +1,199 @@
+Tipo test
+1. ¿Cuál es la principal diferencia entre API REST y API SOAP?
+- C REST usa HTTP con JSON (más ligero) y SOAP usa XML estructurado 
+
+2. ¿Qué comando inicia un servidor web local con PHP?
+- B php -S localhost:8000
+
+3. En XAMPP, ¿qué puerto usa por defecto MySQL?
+- C 3306
+
+4. ¿Cuál es la estructura correcta de etiquetas PHP?
+- B <?php ... ?>
+
+5. ¿Qué framework PHP es conocido por usar Eloquent ORM?
+C) Laravel 
+
+6. ¿Cuál es la diferencia entre include y require en PHP?
+C) require detiene la ejecución si el archivo no existe, include continúa
+
+7. ¿Qué significa el acrónimo XAMPP?
+B) Cross-platform Apache MariaDB PHP Perl 
+
+8. ¿Cuál es la función principal de un archivo .htaccess?
+B) Configurar el servidor Apache 
+
+9. ¿Qué tipo de dato PHP almacena 42?
+C) int
+
+10. ¿Cuál es la sintaxis corta para hacer echo en PHP?
+B) <?= $var ?
+
+11. En desarrollo servidor, ¿qué significa que PHP sea
+"interpretado"?
+B) Se ejecuta directamente línea por línea 
+
+12. ¿Qué comando de terminal lista archivos en Linux/Ubuntu?
+C) ls
+
+13. ¿Cuál es la principal ventaja de Docker sobre XAMPP para
+desarrollo?
+B) Mayor consistencia entre entorno
+
+14. En un proyecto PHP, ¿dónde se deben colocar los archivos
+web?
+B) En C:\xampp\htdocs\
+
+15. ¿Qué tipo de framework es Symfony?
+C) PHP Framework
+
+16. ¿Cuál es el propósito de composer.json?
+B) Gestionar dependencias PHP 
+
+17. ¿Qué puerto usa HTTP por defecto?
+B) 80
+
+18. ¿Qué significa que una variable PHP sea tipado dinámico?
+B) El tipo se define en tiempo de ejecución
+
+19. En una API RESTful, ¿qué método HTTP se usa para crear
+recursos?
+B) POST
+
+20. ¿Cuál es la función de require_once en PHP?
+A) Incluir un archivo solo si no se ha incluido antes
+
+21. ¿Qué es phpMyAdmin?
+B) Una herramienta para administrar MySQL
+
+22. ¿Cuál es la principal función de Apache en un entorno web?
+C) Servir archivos web vía HTTP
+
+23. ¿Qué ventaja tienen los contenedores Docker para desarrollo?
+C) Garantizan entornos reproducibles
+
+24. En PHP, ¿cómo se declara una constante?
+D) Las opciones a y c son correctas
+
+25. ¿Qué característica hace que PHP sea especialmente útil para
+desarrollo web?
+B) Se ejecuta en el servidor y genera HTML dinámico
+
+Parte B Preguntas de desarrollo
+Pregunta 1 (5 puntos): Configuración de Entorno de Desarrollo
+Paso 1: Descargar Xampp desde su pagina oficial
+Paso 2: Una vez la descarga este completa ejecuta el instalador como administrador, esto iniciara la instalacion de Xampp
+Paso 3: Selecciona los componentes
+-Apache: Servidor web que ejecutara PHP
+-MySql: Sistema de gestion de base de datos
+PHP: Lenguaje principal de programacion
+phpMyAdmin: Interfaz web para la gestion de MySql
+FileZilla FTP Server: Para transferencias de archivos(No obligatorio)
+Paso 4: Selecciona la ubicacion donde instalar Xampp, la ubicacion predeterminada (C:\xampp) es la mas recomendada
+Paso5: Verifica que los puertos 80(Apache) y 3306(Mysql) esten disponibles. Si hay problemas configura puertos alternativos
+Paso 6:Inicio de los servicios: Desde el panel de control de Xampp Inicia Apache pulsando al boton de start, inicia MySql tambien pulsando al boton de start y verifica que ambos servicios muestren running y estan en verde
+Paso 7: Verificacion e instalccion: Abre el navegador y navega a http://localhost y se deberia mostrar la pagina de bienvenida de Xampp.
+
+paso 8: Estructura recomendada para el proyecto seria: C:\xampp\php\php.ini
+
+Pregunta 2 (5 puntos): APIs y Comunicación Servidor
+
+La Api rest tiene simplicidad y escabilidad, es ideal para aplicaciones web y moviles, tiene un formato Json mas ligero y tiene los operadores HTTP: Post, Get, Put, Delete
+
+- La Api SOAP tiene un formato xml estructurado, mayor seguridad, transacciones complejas y se usan para apps de empresas
+
+Pregunta 3 (4 puntos): Estructura de Proyecto PHP
+
+mi_proyecto/
+
+	index.php	*Pagina principal*
+	
+	config/		*Configuracion*
+	
+	css/		*Hoja de estilo*
+	
+	js/		*Javascript*
+	
+	images/		*Imagenes*
+	
+	includes/	*Archivos reutilizables*
+	
+	pages/		*Paginas adicionales*
+	
+	README.md	*Documentacion*
+
+
+Pregunta 4 (4 puntos): Variables y Tipos de Datos en PHP
+
+$nombre: "Elena" //Declaracion de una variable de tipo String
+var_dump($nombre) //Mostrar el tipo de variable
+
+$nombreBool = (bool)$nombre //Convierte la variable de tipo String a Booleano
+var_dump($nombreBool) //Muestra el nuevo tipo de variable
+
+define("Elena", $nombreBool); //Uso de constantes usando define
+
+
+Pregunta 5 (3 puntos): Integración HTML-PHP
+
+<?php
+$nombre: "Elena"
+$edad: "22"
+include: "header.php"
+?>
+<body>
+	<main>
+	<?= $nombre?>
+	<?= $edad?>
+	</main>
+</body>
+
+<?php
+include: "footer.php
+?>
+
+
+Pregunta 6 (4 puntos): Configuración Apache y .htaccess
+Archivo de texto de configuración de Apache, sirve para controlar el comportamiento de un directorio y subdirectorios.
+La configuración básica de reescritura de URL permite transformar URLs dinámicas en amigables para el usuario.
+La configuración de seguridad básica evita que se vea el contenido de carpetas, protege archivos importantes, restringe acceso por IP, evita que se ejecuten scripts en zonas seguras.
+Apache tiene configuración .htaccess, usa modulos mod_php, mod_rewrite.
+Nginx tiene mayir rendimiento y configuración centralizada.
+Comandos terminal: 
+-sudo systemctl start apache2 → inicia Apache
+-sudo systemctl stop apache2 → lo detiene
+-sudo systemctl restart apache2 → lo reinicia
+-sudo systemctl status apache2 → muestra su estado
+
+Preguntas cortas
+
+26. ¿Qué significa PHP?
+-Hypertext Preprocessor Es un lenguaje de programacion de codigo abierto especificamente diseñado para el desarrollo web.
+
+27. ¿Cuál es la diferencia entre echo y print en PHP?
+-echo no devuelve un valor y puede imprimir multiples cadenas mientras que print devuelve valor 1 y solo puede imprimir un argumento a la vez.
+
+28. ¿Qué función se usa para conectar a MySQL desde PHP?
+-La funcion MySqli_conect()
+
+29. ¿Cómo se define una variable superglobal en PHP? Nombra 3
+ejemplos.
+-Se pueden definir con $_GET, $_SERVER y $_POST
+
+30. ¿Qué hace el operador . en PHP?
+- Sirve para juntar texto.
+
+31. ¿Cuál es la diferencia entre == y === en PHP?
+-El == compara el valor sin importar el tipo de dato, mientras que el === compara el valor y el tipo de dato.
+
+32. ¿Qué directorio contiene los archivos web en XAMPP?
+- C:\xampp\htdocs\
+
+33. ¿Cómo se inicia sesión en PHP?
+-Usando la funcion session_start()
+
+34. ¿Qué hace phpinfo()?
+-Muestra una pagina extensa de informacion sobre la configuracion del servidor y el entorno PHP.
+
+35. ¿Cuál es la sintaxis para comentarios de una línea en PHP?
+- //
